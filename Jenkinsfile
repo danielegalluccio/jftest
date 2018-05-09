@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                /dev/ws/Jiraton/Tickets_in_Column.sh
             }
         }
         stage('Test') {
@@ -14,7 +15,8 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                echo 'Deploying.... ${select-env}'
+                echo "value ${str}"
             }
         }
     }
