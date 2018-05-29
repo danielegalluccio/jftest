@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh /dev/ws/Jiraton/Tickets_in_Column.sh
+                sh whoami
+                sh /Users/daniele/dev/ws/Jiraton/Tickets_in_Column.sh
             }
         }
         stage('Test') {
